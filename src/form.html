@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pago</title>
+</head>
+<body>
+  <h1>Membresía mensual</h1>
+  <p>A continuación, ingrese su e-mail y número de tarjeta para hacer válido nuestro plan mensual. Estos campos son obligatorios.</p>
+
+  <form>
+  <label for="email-example">Correo electrónico</label>
+  <input
+    type="email"
+    id="email-example"
+    placeholder="Email"
+    name="email-example"
+    required
+  />
+</form>
+
+<p><form>
+    <label for="card-example">Información de tarjeta</label>
+    <input
+      type="card"
+      id="card-example"
+      placeholder="Número de tarjeta"
+      name="card-example"
+      required
+    />
+  </form></p> 
+  <p><button type="submit">Validar tarjeta</button></p>
+
+  <p>Al oprimir el botón Aceptar, usted confirma su suscripción a nuestro programa mensual y a nuestros Términos de servicio. Su método de pago será la tarjeta que ha proporcionado. Puede cancelar en cualquier momento en la sección de Configuraciones.</p>
+
+  <form name="myForm" onsubmit="return validateForm();">
+    <input type="checkbox" name="mycheckbox" id="myID"/>
+    Acepto los términos y condiciones
+    <input type="submit" value="Aceptar"/>
+  </form>  
+  <br/>
+  <div id="info"></div>
+  
+  <script type="text/javascript">
+  
+  function validateForm()
+  {
+      var element = document.forms["myForm"]["mycheckbox"].checked;
+  
+      if(element == true){
+          document.getElementById("info").innerHTML  = "Gracias por confirmar";
+          return false; 
+      }
+      else{
+          document.getElementById("info").innerHTML  =  "No ha aceptado los términos y condiciones";
+          return false;
+      }
+  }
+  
+  </script>
+  
+</body>
+</html>

@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup Window</title>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>¡Aprende español con profesores nativos!</h1>
+    <p>Obtén nuestro plan mensual por $200 mxn</p>
+    <p>Nuestra oferta educativa incluye clases individuales y personalizadas con profesores nativos y certificados, que se enfocan en el aprendizaje desde una metodología flexible, dinámica y creativa, ¡adquiere nuestros servicios pagando una suscripción mensual! Puedes cancelar en cualquier momento.</p>
+    <button class="button" id="subscriptionBtn">Adquirir suscripción mensual</button>
+</div>   
+
+<div class="popup" id="popup">
+     <div class="popup-content">
+         <h1>Suscripción mensual</h1>
+         <p>A continuación, ingrese su e-mail y número de tarjeta para hacer válido nuestro plan mensual. Estos campos son obligatorios.</p>    
+        
+         <form>
+            <label for="email-example">Correo electrónico</label>
+         <p><input
+              type="email"
+              id="email-example"
+              placeholder="Email"
+              name="email-example"
+              required
+            />
+         </form></p>
+         
+         <form>
+            <img src="close.png" alt="Close" class="close">
+            <label for="card-example">Información de tarjeta</label>
+         <p><input
+              type="card"
+              id="card-example"
+              placeholder="Número de tarjeta"
+              name="card-example"
+              required
+            />
+         </form></p>
+         <p><button type="submit">Validar tarjeta</button></p>
+
+         <p>Al oprimir el botón Aceptar, usted confirma su suscripción a nuestro programa mensual y a nuestros Términos y condiciones. Su método de pago será la tarjeta que ha proporcionado. Puede cancelar en cualquier momento en la sección de Configuraciones.</p>
+
+         <form name="myForm" id="myForm">
+            <input type="checkbox" name="mycheckbox" id="myID"/>
+            Acepto los términos y condiciones
+            <input type="submit" value="Aceptar"/>
+          </form>
+        
+          <br/>
+          <div id="info"></div>
+          
+          <script src="./index.js" type="module"> </script>
+        </div>
+</div>
